@@ -68,10 +68,14 @@ var getYear = function(){
   return this.year;
 };
 
-//Above you're given the getYear function. Using your prius and mustang objects from above, use the proper syntax that will allow for you to call the getYear function with the prius then the mustang objects being the focal objects. *Don't add getYear as a property on both objects*.
+//Above you're given the getYear function. Using your prius and mustang objects from above, use the proper syntax that will 
+//allow for you to call the getYear function with the prius then the mustang objects being the focal objects. 
+//*Don't add getYear as a property on both objects*.
 
 //Note(no tests)
   //Code Here
+  console.log(getYear.call(prius));
+  console.log(getYear.call(mustang));
 
 
 //New Problem
@@ -88,14 +92,16 @@ var getMyUsername = function(){
   console.log(this.username);
 };
 
-setTimeout(getMyUsername, 5000);
+setTimeout(getMyUsername.call(myUser), 5000);
 
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 //Note(no tests)
   //Answer Here
+  //It will return undefined
 
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
+  //It is bound to the global window object, which does not have a username property
 
 //Fix the setTimeout invocation so that the user object will be the focal object when getUsername is ran.
